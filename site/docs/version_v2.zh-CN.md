@@ -2,6 +2,48 @@
 changelog: true
 ---
 
+## 2.59.0
+
+2024-01-19
+
+### 💎 功能优化
+
+- `Popover` 组件当内容为空时不显示弹出框。([#2504](https://github.com/arco-design/arco-design/pull/2504))
+
+### 🆕 功能升级
+
+- `InputTag` 组件新增 `maxTagCount` 属性以支持自定义最多展示的标签数量。([#2503](https://github.com/arco-design/arco-design/pull/2503))
+- `Trigger` 支持根据视口自动调整位置时，设置视口偏移量([#2502](https://github.com/arco-design/arco-design/pull/2502))
+- 新增数据色色彩序列([#2494](https://github.com/arco-design/arco-design/pull/2494))
+- 虚拟列表新增 `wrapperChild` 和 `onScroll` 属性。([#2483](https://github.com/arco-design/arco-design/pull/2483))
+- `Carousel` 组件的 `card` 模式增加纵向排列支持([#2462](https://github.com/arco-design/arco-design/pull/2462))
+
+### 🐛 问题修复
+
+- 修复 `Watermark` 在边界场景下内容显示不完全的 bug。([#2507](https://github.com/arco-design/arco-design/pull/2507))
+- 修复 `Form` 组件的 `resetFields` 方法传入非 string/array 类型 的参数时，所有表单项都被重置的 bug。([#2505](https://github.com/arco-design/arco-design/pull/2505))
+- 修复 `Typography` 组件 `resize` 节流问题([#2488](https://github.com/arco-design/arco-design/pull/2488))
+
+## 2.58.3
+
+2024-01-11
+
+### 💎 功能优化
+
+- 优化 `Image` 组件在 `lazyload` 时视口外的元素不显示占位 loading，避免页面重排([#2492](https://github.com/arco-design/arco-design/pull/2492))
+
+### 🐛 问题修复
+
+- 修复 `Image` 组件边界场景下循环渲染导致白屏的 bug。([#2489](https://github.com/arco-design/arco-design/pull/2489))
+
+## 2.58.2
+
+2024-01-08
+
+### 🐛 问题修复
+
+- 修复 `Select` 在开启 `allowCreate` 后在边缘情况可能出现的 `effect` 无限循环。([#2484](https://github.com/arco-design/arco-design/pull/2484))
+
 ## 2.58.1
 
 2024-01-05

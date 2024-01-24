@@ -174,7 +174,7 @@ function InputNumber(baseProps: InputNumberProps, ref) {
     }
 
     const finalValue = value.isInvalid
-      ? getDecimal(min === -Infinity ? 0 : min)
+      ? getDecimal(min === -Infinity || (min <= 0 && max >= 0) ? 0 : min)
       : value.add(method === 'plus' ? step : -step);
 
     setValue(getLegalValue(finalValue));
@@ -224,8 +224,6 @@ function InputNumber(baseProps: InputNumberProps, ref) {
       }
     },
     onKeyDown: (e) => {
-
-
       const key = e.key;
       if (key === ArrowDown.key) {
         e.stopPropagation();
