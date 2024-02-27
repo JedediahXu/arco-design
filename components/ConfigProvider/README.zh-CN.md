@@ -60,6 +60,7 @@ export type ComponentConfig = {
     | "defaultPickerValue"
     | "pickerValue"
     | "onPickerValueChange"
+    | "inputProps"
   >;
   Descriptions?: DescriptionsProps;
   Divider?: DividerProps;
@@ -67,6 +68,7 @@ export type ComponentConfig = {
   Dropdown?: DropdownProps;
   "Dropdown.Button"?: DropdownButtonProps;
   Empty?: EmptyProps;
+  "Typography.Ellipsis"?: TypographyEllipsisProps;
   Form?: FormProps;
   "Grid.Row"?: RowProps;
   "Grid.Col"?: ColProps;

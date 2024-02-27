@@ -174,6 +174,38 @@ exports[`renders ColorPicker/demo/disabled.md correctly 1`] = `
 </div>
 `;
 
+exports[`renders ColorPicker/demo/disabledAlpha.md correctly 1`] = `
+<div>
+  <div
+    class="arco-color-picker arco-color-picker-size-default"
+  >
+    <div
+      class="arco-color-picker-preview"
+      style="background-color:#165DFF"
+    />
+    <input
+      class="arco-color-picker-input"
+      readonly=""
+      value="#165DFF"
+    />
+  </div>
+  <br />
+  <div
+    class="arco-color-picker arco-color-picker-size-default"
+  >
+    <div
+      class="arco-color-picker-preview"
+      style="background-color:#165DFF80"
+    />
+    <input
+      class="arco-color-picker-input"
+      readonly=""
+      value="#165DFF80"
+    />
+  </div>
+</div>
+`;
+
 exports[`renders ColorPicker/demo/format.md correctly 1`] = `
 <div>
   <div
@@ -298,5 +330,18 @@ exports[`renders ColorPicker/demo/size.md correctly 1`] = `
       value="#165DFF"
     />
   </div>
+</div>
+`;
+
+exports[`renders ColorPicker/demo/trigger.md correctly 1`] = `
+<div>
+  <button
+    class="arco-btn arco-btn-secondary arco-btn-size-default arco-btn-shape-square"
+    type="button"
+  >
+    <span>
+      Open Color Picker: #165DFF
+    </span>
+  </button>
 </div>
 `;

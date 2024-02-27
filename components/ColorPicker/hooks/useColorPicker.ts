@@ -2,11 +2,13 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { HSV } from '../interface';
 import { formatInputToHSVA, hsvToRgb, rgbaToHex, rgbToHex } from '../../_util/color';
 import useMergeValue from '../../_util/hooks/useMergeValue';
+import useIsFirstRender from '../../_util/hooks/useIsFirstRender';
 
 interface UseColorPickerProps {
   value?: string;
   defaultValue?: string;
   defaultPopupVisible?: boolean;
+  disabledAlpha?: boolean;
   popupVisible?: boolean;
   format?: 'hex' | 'rgb';
   onChange?: (value: string) => void;
@@ -14,7 +16,9 @@ interface UseColorPickerProps {
 }
 
 export const useColorPicker = (props: UseColorPickerProps) => {
-  const { format, onChange } = props;
+  const { format, onChange, disabledAlpha } = props;
+
+  const isFirstRender = useIsFirstRender();
 
   const [value, setValue] = useMergeValue('', props);
 
@@ -59,7 +63,7 @@ export const useColorPicker = (props: UseColorPickerProps) => {
 
   useEffect(() => {
     setValue(formatValue);
-    onChange?.(formatValue);
+    !isFirstRender && onChange?.(formatValue);
   }, [formatValue]);
 
   const onVisibleChange = useCallback(
@@ -82,6 +86,9 @@ export const useColorPicker = (props: UseColorPickerProps) => {
 
   const onHsvChange = (_value: HSV) => {
     setHsv(_value);
+    if (disabledAlpha && alpha !== 100) {
+      setAlpha(100);
+    }
   };
 
   const onAlphaChange = (_value: number) => {

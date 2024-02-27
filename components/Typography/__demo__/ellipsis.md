@@ -1,11 +1,13 @@
 ---
-order: 5
+order: 8
 title:
-  zh-CN: 省略
-  en-US: Ellipsis
+  zh-CN: 省略（不推荐）
+  en-US: Ellipsis(Not recommended)
 ---
 
 ## zh-CN
+
+**不推荐使用 ellipsis 属性开启折叠，建议使用 Typography.Ellipsis 组件替代。**
 
 在空间不足时省略多行文本内容。
 
@@ -17,6 +19,7 @@ title:
 组件用了 `React.Fragement` 导致的问题。React 原生的问题 （[Issue 链接](https://github.com/facebook/react/issues/17256)）。可以设置 `ellipsis.wrapper` 解决。比如 `ellipsis={{ wrapper: 'span' }}`。
 
 ## en-US
+**It is not recommended to use the ellipsis attribute to enable folding. It is recommended to use the Typography.Ellipsis component instead.**
 
 Omit multiple lines of text when there is insufficient space.
 

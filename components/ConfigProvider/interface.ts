@@ -67,6 +67,7 @@ import { UploadProps } from '../Upload/interface';
 import { VerificationCodeProps } from '../VerificationCode/interface';
 import { WatermarkProps } from '../Watermark/interface';
 import { ColorPickerProps } from '../ColorPicker';
+import { TypographyEllipsisProps } from '../Typography';
 
 export type ThemeConfig = Record<string, any>;
 
@@ -99,6 +100,7 @@ export type ComponentConfig = {
     | 'defaultPickerValue'
     | 'pickerValue'
     | 'onPickerValueChange'
+    | 'inputProps'
   >;
   Descriptions?: DescriptionsProps;
   Divider?: DividerProps;
@@ -106,6 +108,7 @@ export type ComponentConfig = {
   Dropdown?: DropdownProps;
   'Dropdown.Button'?: DropdownButtonProps;
   Empty?: EmptyProps;
+  'Typography.Ellipsis'?: TypographyEllipsisProps;
   Form?: FormProps;
   'Grid.Row'?: RowProps;
   'Grid.Col'?: ColProps;
